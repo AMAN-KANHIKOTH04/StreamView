@@ -1,0 +1,71 @@
+body {
+    min-height: max(884px, 100dvh);
+}
+.hide-scrollbar::-webkit-scrollbar,
+.no-scrollbar::-webkit-scrollbar,
+::-webkit-scrollbar {
+    display: none;
+    width: 0px;
+    height: 0px;
+}
+.hide-scrollbar, .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.glass-edge {
+    border: 1px solid transparent;
+    background: linear-gradient(180deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 100%) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+.glass-panel {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.glass-panel-heavy {
+    background: rgba(19, 19, 27, 0.7);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+.glass-overlay {
+    background: linear-gradient(to top, rgba(13, 13, 21, 0.95) 0%, rgba(13, 13, 21, 0.6) 50%, rgba(13, 13, 21, 0) 100%);
+}
+.controls-fade, .fade-overlay {
+    transition: opacity 0.4s ease-in-out;
+}
+.controls-hidden, .idle .fade-overlay {
+    opacity: 0;
+    pointer-events: none;
+}
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #c0c1ff;
+    cursor: pointer;
+    margin-top: -6px;
+    box-shadow: 0 0 10px rgba(192, 193, 255, 0.5);
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+}
+.pb-safe { padding-bottom: env(safe-area-inset-bottom, 20px); }
+.search-input:focus + .search-icon {
+    color: #c0c1ff;
+    text-shadow: 0 0 8px rgba(192,193,255,0.4);
+}
