@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stream - Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&amp;family=Geist:wght@600&amp;family=Inter:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#4f2500",
+                        "outline": "#908fa0",
+                        "surface-container-lowest": "#0d0d15",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "surface-bright": "#393841",
+                        "on-background": "#e4e1ed",
+                        "on-tertiary-fixed": "#301400",
+                        "on-secondary-container": "#d6a9ff",
+                        "secondary-container": "#6f00be",
+                        "secondary-fixed-dim": "#ddb7ff",
+                        "on-surface-variant": "#c7c4d7",
+                        "on-secondary-fixed-variant": "#6900b3",
+                        "secondary": "#ddb7ff",
+                        "primary-fixed": "#e1e0ff",
+                        "on-secondary-fixed": "#2c0051",
+                        "tertiary-fixed": "#ffdcc5",
+                        "inverse-primary": "#494bd6",
+                        "inverse-surface": "#e4e1ed",
+                        "on-secondary": "#490080",
+                        "tertiary-container": "#d97721",
+                        "on-surface": "#e4e1ed",
+                        "background": "#13131b",
+                        "on-primary-container": "#0d0096",
+                        "on-error": "#690005",
+                        "tertiary": "#ffb783",
+                        "surface-container": "#1f1f27",
+                        "error-container": "#93000a",
+                        "error": "#ffb4ab",
+                        "on-primary-fixed": "#07006c",
+                        "outline-variant": "#464554",
+                        "on-primary": "#1000a9",
+                        "surface-container-low": "#1b1b23",
+                        "surface-variant": "#34343d",
+                        "surface": "#13131b",
+                        "surface-container-highest": "#34343d",
+                        "on-primary-fixed-variant": "#2f2ebe",
+                        "secondary-fixed": "#f0dbff",
+                        "on-tertiary-fixed-variant": "#703700",
+                        "surface-tint": "#c0c1ff",
+                        "on-error-container": "#ffdad6",
+                        "primary": "#c0c1ff",
+                        "on-tertiary-container": "#452000",
+                        "inverse-on-surface": "#303038",
+                        "tertiary-fixed-dim": "#ffb783",
+                        "surface-dim": "#13131b",
+                        "primary-container": "#8083ff",
+                        "surface-container-high": "#292932"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-margin": "20px",
+                        "element-gap": "8px",
+                        "gutter-x": "12px",
+                        "section-gap": "32px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "label-caps": ["Geist"],
+                        "body-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "headline-xl": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["20px", { "lineHeight": "28px", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #13131b; /* background */
+            color: #e4e1ed; /* on-background */
+        }
+        
+        /* Hide scrollbar for horizontal scrolling but keep functionality */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .glass-edge {
+            border: 1px solid transparent;
+            background: linear-gradient(180deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 100%) border-box;
+            -webkit-mask:
+                linear-gradient(#fff 0 0) padding-box, 
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="antialiased min-h-screen flex flex-col overflow-x-hidden font-body-md text-body-md">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-white/10 hidden md:flex md:justify-between md:items-center md:px-container-margin md:h-16">
+<div class="flex items-center gap-4">
+<button class="text-outline hover:opacity-80 transition-opacity active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-headline-xl text-headline-xl tracking-tighter text-primary bg-clip-text bg-gradient-to-r from-primary to-secondary">STREAM</h1>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex gap-6">
+<a class="text-primary hover:opacity-80 transition-opacity active:scale-95 duration-200" href="#">Home</a>
+<a class="text-outline hover:opacity-80 transition-opacity active:scale-95 duration-200" href="#">Discover</a>
+<a class="text-outline hover:opacity-80 transition-opacity active:scale-95 duration-200" href="#">Library</a>
+</nav>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-white/10">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="A close-up, dimly lit portrait of a user profile avatar in a cinematic cyberpunk setting. The lighting features sharp neon glows highlighting facial contours against a deep dark background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvBomS1_BytII2bYseC-1vgerhn7QDh-62uzK_tkF56WxzyGAPHu9G2T91MOrRdcFhIuhtBhYiYBcoMtMUpKjZ6Lt3lNxKjYekTZ6PJgfnXsCo2b6nyMhBtxOzMmbV-le9JyfMN7JYv3dLoXfH1SNbGAy-osFqwCHPWrQZdXr59k7kq34czOl-XRk6C3jRntUIUrSXgpfJDQdOsHi1gHR7fW3l8EmhItN24r54t3TJxIQtfqelXwo"/>
+</div>
+</div>
+</header>
+<!-- Mobile TopAppBar (from JSON) -->
+<header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-white/10 flex justify-between items-center px-container-margin h-16 md:hidden">
+<button class="text-outline hover:opacity-80 transition-opacity active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-headline-xl text-headline-xl tracking-tighter text-primary bg-clip-text bg-gradient-to-r from-primary to-secondary">STREAM</h1>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-white/10">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="A close-up, dimly lit portrait of a user profile avatar in a cinematic cyberpunk setting. The lighting features sharp neon glows highlighting facial contours against a deep dark background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOy177nafv_xbNSU_w_TOGwBja6L-IuAYOmTydtf_vOi2yoBG70WTy-xMV9Dq7bINi_G-N1DWG7Nj3KNeVCyAqVd3wupzX4KHUuY8SVyE4yVeAoFqpyKj_NSJ2-T8EKe5LIY9Pe6s1lTL5il_amj-ZYmKBhJ1ybMHf8aWGPaf_lM0Tmzr58QJp8-mY_Q0SfW3oiOfQ6WDpBRbM6XyjMVH0gfQuLmLn9XMqfbB2OCNaj0CK6c7_7ko"/>
+</div>
+</header>
+<main class="flex-1 pb-24 pt-16 md:pt-20">
+<!-- Hero Carousel -->
+<section class="relative w-full h-[530px] md:h-[618px] mb-section-gap">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background z-10"></div>
+<div class="w-full h-full overflow-hidden relative">
+<div class="bg-cover bg-center w-full h-full absolute inset-0" data-alt="A sweeping, cinematic establishing shot of a futuristic metropolis at night. Neon signs reflect off rain-slicked streets, towering skyscrapers fade into a smoggy sky. The scene is dominated by deep indigo and vibrant purple accents, creating a high-end, immersive dark mode aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA2BNYgMumVeGiHEcrmbv9N36MtCSJlq-yZXKT_q-RgyiVZD5z6lZ6zvQUzOrlLhryRVMtl1EdlXsQi2g6RGj9ec2mbputxj8ObJh_XC3nfAN6Rjclwr1I6KTZkR9ronHX-Us6QUa08ykoFWERQKZlGTyUN8HKqQ7eHe-1JvDOEEgI5KtUz1qQsZm-SzjdCqEwup5yiRT9EdkqL1B7acMoGNHX0IGZ5itFA0rBGx7SQawzqqNNTsBA')"></div>
+</div>
+<div class="absolute bottom-0 left-0 w-full z-20 px-container-margin pb-8 flex flex-col justify-end">
+<div class="flex items-center gap-2 mb-3">
+<span class="px-2 py-1 rounded-full bg-surface-container/50 backdrop-blur-md border border-white/10 font-label-caps text-label-caps text-on-surface">SCI-FI</span>
+<span class="px-2 py-1 rounded-full bg-surface-container/50 backdrop-blur-md border border-white/10 font-label-caps text-label-caps text-on-surface">NEW</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl md:text-5xl text-on-background mb-2">NEON DIVIDE</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-lg mb-6 line-clamp-2">In a city where memories are currency, a rogue archivist uncovers a secret that could shatter the fragile peace between humans and synthetic constructs.</p>
+<div class="flex gap-4">
+<button class="bg-gradient-to-r from-primary-container to-secondary-container text-on-background px-6 py-3 rounded-lg font-headline-lg-mobile text-headline-lg-mobile flex items-center justify-center gap-2 hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined" data-icon="play_arrow" data-weight="fill">play_arrow</span>
+                        Watch Now
+                    </button>
+<button class="w-12 h-12 rounded-full bg-white/10 backdrop-blur-xl border border-white/10 flex items-center justify-center text-on-background hover:bg-white/20 transition-colors">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Recommended for You -->
+<section class="mb-section-gap">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-background px-container-margin mb-4">Recommended for You</h3>
+<div class="flex overflow-x-auto hide-scrollbar gap-element-gap px-container-margin snap-x snap-mandatory">
+<div class="snap-start flex-none w-[280px] md:w-[320px] group relative">
+<div class="w-full aspect-video rounded-lg overflow-hidden relative mb-2 ring-2 ring-primary ring-offset-2 ring-offset-background drop-shadow-[0_0_15px_rgba(192,193,255,0.15)]">
+<img alt="Thumbnail" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A cinematic medium shot of an astronaut floating in deep space, illuminated by the ethereal glow of a distant nebula. The scene uses rich, dark blacks contrasted with subtle hints of primary-fixed-dim color to fit a premium streaming app interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOe5LZschBkhajs4jcR4I7X5ODBlTWL_Fi8D273pftoKm9cAjyG34e8tBZ8RhORO5yURrdpYG1nTFYSpHCN_0Y2I9SgCHS8HwSBRauu9Eph7xB7gYXyW7v8myXjWl4HPE7uLvBx5ZGMBDPyW3puo0WHjK3dvNMwTXUMybZleGEG-Y1bEZDqF4btOr7mxLcCYR_u2GQhADC6F1S2uI46f4qMnYxcnHiYtvSwsthbnblADUTYx9ALeQ"/>
+<div class="absolute bottom-2 right-2 bg-black/80 px-1.5 py-0.5 rounded font-label-caps text-label-caps text-white">45:20</div>
+<div class="absolute inset-0 rounded-lg glass-edge"></div>
+</div>
+<h4 class="font-body-md text-body-md font-medium text-on-background truncate">The Void's Edge</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">2023 • Series</p>
+</div>
+<div class="snap-start flex-none w-[280px] md:w-[320px] group relative">
+<div class="w-full aspect-video rounded-lg overflow-hidden relative mb-2">
+<img alt="Thumbnail" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A moody, atmospheric shot of a dimly lit jazz club. Smoke hangs in the air, catching the faint spotlight on a solitary saxophone player. The color palette emphasizes warm tertiary tones and deep, immersive shadows suited for a dark UI theme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZGRWQcP5OOAJtvuF-ANpvzl6MKjPOGnVqKNHrUGpVPs47wksglWKXeqoD6Ls2i-6D3n7vkEz7IX17WtYk4Z3cWxEns43IEvEZkHXpDt5twJuM17M9GhZgmFD9zKEVZRgqk78rdNkf_dyjxYkqdGLE3nruXQovHRivd0ueWVSGK5zOIeXSnfHuCiqYmwhs9ONCvzIF6BOzkJgdTJvnvTM071_p0URCvWufxU8u4AENHlVa21ypOqA"/>
+<div class="absolute bottom-2 right-2 bg-black/80 px-1.5 py-0.5 rounded font-label-caps text-label-caps text-white">1:52:10</div>
+</div>
+<h4 class="font-body-md text-body-md font-medium text-on-background truncate">Midnight Blue</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">2024 • Movie</p>
+</div>
+<div class="snap-start flex-none w-[280px] md:w-[320px] group relative">
+<div class="w-full aspect-video rounded-lg overflow-hidden relative mb-2">
+<img alt="Thumbnail" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A high-contrast, macro photograph of intricate clockwork gears bathed in an icy blue light, highlighting mechanical precision and sleek engineering. The image maintains a sophisticated, minimalist dark theme appropriate for high-end digital streaming content." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ_tJsr3Ex1fCSZSQPzVdnKcq4tqW4LxLIVYY8PWLBACDqncXCsR_EH6hgz-CiSRCvCZnUhgSn0nirX2rvoMD27sW__6UxJ_Jta8eh7qrBdti8x4cBOtrca9y72BVgZJb8iUmiubi-8x20Bc81bOhHpmwzxZXw1YniSY4pN783cr7DF9SOaMW0mgzuZyUpUeQnuti-TPU6pxGkm1CBrweQT85MerobpC_On8xQd9uLW2im5urRFjY"/>
+<div class="absolute bottom-2 right-2 bg-black/80 px-1.5 py-0.5 rounded font-label-caps text-label-caps text-white">24:15</div>
+</div>
+<h4 class="font-body-md text-body-md font-medium text-on-background truncate">Chronos Design</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Docuseries</p>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 rounded-t-xl bg-surface/10 backdrop-blur-3xl border-t border-white/10 flex justify-around items-center h-20 px-4 pb-safe">
+<a class="flex flex-col items-center justify-center text-primary drop-shadow-[0_0_8px_rgba(192,193,255,0.4)] hover:opacity-80 transition-opacity active:scale-90 duration-200 w-16" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home" data-weight="fill">home</span>
+<span class="font-label-caps text-label-caps">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-outline hover:text-primary-fixed-dim transition-colors active:scale-90 duration-200 w-16" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="search">search</span>
+<span class="font-label-caps text-label-caps">Discover</span>
+</a>
+<a class="flex flex-col items-center justify-center text-outline hover:text-primary-fixed-dim transition-colors active:scale-90 duration-200 w-16" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="video_library">video_library</span>
+<span class="font-label-caps text-label-caps">Library</span>
+</a>
+<a class="flex flex-col items-center justify-center text-outline hover:text-primary-fixed-dim transition-colors active:scale-90 duration-200 w-16" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-label-caps text-label-caps">Profile</span>
+</a>
+</nav>
+</body></html>
